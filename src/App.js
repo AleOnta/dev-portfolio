@@ -1,12 +1,17 @@
 import "./App.css";
-
+import { Routes, Route } from "react-router-dom";
+import { AboutMeComponent } from "./components/home_page/about_me/AboutMeComponent";
 function App() {
   return (
-    <div>
-      <h1 className="text-9xl font-bold text-main-gray font-titles">
-        Hello world!
-      </h1>
-    </div>
+    <>
+      <div className="bg-blueish-gray">
+        <div className="container mx-auto py-20">
+          <Routes>
+            <Route path="*" element={<AboutMeComponent />} />
+          </Routes>
+        </div>
+      </div>
+    </>
   );
 }
 

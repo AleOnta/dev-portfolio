@@ -8,7 +8,7 @@ module.exports = {
         "blueish-gray": " #404952",
       },
       fontFamily: {
-        titles: ["Karla", "cursive"],
+        titles: ["Inter", "sans-serif"],
         body: ["Roboto Flex", "sans-serif"],
       },
     },
