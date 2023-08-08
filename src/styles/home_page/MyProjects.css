@@ -1,0 +1,27 @@
+.stretched-project {
+  width: 100%;
+}
+
+.retired-project {
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .stretched-project {
+    width: 68%;
+  }
+
+  .retired-project {
+    width: 30%;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .stretched-project {
+    width: 75%;
+  }
+
+  .retired-project {
+    width: 23%;
+  }
+}

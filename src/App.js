@@ -1,13 +1,13 @@
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
-import { AboutMeComponent } from "./components/home_page/about_me/AboutMeComponent";
+import { HomepageComponent } from "./components/home_page/HomepageComponent";
 function App() {
   return (
     <>
       <div className="bg-blueish-gray">
         <div className="container mx-auto py-20">
           <Routes>
-            <Route path="*" element={<AboutMeComponent />} />
+            <Route path="*" element={<HomepageComponent />} />
           </Routes>
         </div>
       </div>
