@@ -1,27 +1,187 @@
-.stretched-project {
+.my-projects-container {
+  position: relative;
   width: 100%;
+  height: 46vh;
+  padding: 3rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 1.5rem;
 }
 
-.retired-project {
+.dim-layer {
+  position: absolute;
+  height: 100%;
   width: 100%;
+  left: 0;
+  top: 0;
+  background: black;
+  opacity: 0;
+  pointer-events: none;
 }
 
-@media screen and (min-width: 768px) {
-  .stretched-project {
-    width: 68%;
-  }
-
-  .retired-project {
-    width: 30%;
-  }
+.card-project {
+  background: white;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  overflow: hidden;
+  border: 2px solid gray;
 }
 
-@media screen and (min-width: 1280px) {
-  .stretched-project {
-    width: 75%;
-  }
+.card-wrapper {
+  display: flex;
+  align-items: stretch;
+}
 
-  .retired-project {
-    width: 23%;
-  }
+/* Styles for project card with large class (index 0 and 2) */
+
+.card-project.large .project-preview {
+  background-image: url("../../assets/images/projects_previews/mwa_preview.png");
+  background-position: top left;
+  background-size: cover;
+}
+
+.card-project.large .project-content {
+  background-image: linear-gradient(
+    90deg,
+    rgba(63, 63, 82, 0.95) 55%,
+    rgba(41, 53, 86, 0) 100%
+  );
+  position: relative;
+  color: white;
+}
+
+.card-project.large .project-content .project-title {
+  font-size: 1.4rem;
+
+  font-family: "Roboto Flex", sans-serif;
+  font-weight: 600;
+  border-radius: 10px;
+}
+
+.card-project.large .project-content .project-description {
+  font-size: 0.85rem;
+  width: 52%;
+  font-family: "Karla", sans-serif;
+  background-color: rgba(211, 211, 211, 0.199);
+  border-radius: 10px;
+}
+
+.card-project.large .project-content .project-date {
+  font-size: 0.8rem;
+  font-family: "Karla", sans-serif;
+  background-color: #49495bd8;
+  border-radius: 10px;
+  font-weight: 700;
+}
+
+/* Styles for project card with small class (index 1 and 3) */
+
+.card-project.small .project-preview {
+  background-image: url("../../assets/images/projects_previews/wcv_preview.png");
+  background-position: top center;
+  background-size: cover;
+}
+
+.card-project.small .project-content {
+  background-color: #49495bd8;
+  position: relative;
+
+  color: white;
+}
+
+.card-project.small .project-content .project-title {
+  font-size: 1.4rem;
+  font-family: "Roboto Flex", sans-serif;
+
+  font-weight: 600;
+  border-radius: 10px;
+}
+
+.card-project.small .project-content .project-description {
+  width: 65%;
+  font-size: 0.85rem;
+  font-family: "Karla", sans-serif;
+  background-color: rgba(211, 211, 211, 0.199);
+  border-radius: 10px;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.card-project.small .project-content .project-date {
+  font-size: 0.8rem;
+  font-family: "Karla", sans-serif;
+  background-color: #49495bd8;
+  border-radius: 10px;
+  font-weight: 700;
+}
+
+.card-project:nth-child(1) {
+  grid-column: 1 / span 2;
+  grid-row: 1;
+}
+
+.card-project:nth-child(2) {
+  grid-column: 3;
+  grid-row: 1;
+}
+.card-project:nth-child(3) {
+  grid-column: 1;
+  grid-row: 2;
+}
+.card-project:nth-child(4) {
+  grid-column: 2 / span 2;
+  grid-row: 2;
+}
+
+button {
+  background-color: antiquewhite;
+}
+
+.project-close-btn {
+  width: 30px;
+  height: 30px;
+  transition: opacity 0.5s;
+}
+
+.project-close-btn.btn-off {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.project-close-btn.btn-on {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.project-close-btn:hover {
+  transform: scale(1.03);
+}
+
+.project-close-btn .path-to-fill:hover {
+  stroke: black;
+}
+
+.opened-card {
+  border-radius: 15px;
+  cursor: pointer;
+  height: auto;
+  width: 80%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  z-index: 10;
+  grid-column: auto !important;
+  grid-row: auto !important;
+}
+
+.card-project .project-title {
+  font-size: 1.6rem;
+  font-weight: 700;
 }

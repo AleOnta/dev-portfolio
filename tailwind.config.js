@@ -5,7 +5,7 @@ module.exports = {
     extend: {
       colors: {
         "main-gray": "#455262",
-        "blueish-gray": " #404952",
+        "blueish-gray": "#404952",
       },
       fontFamily: {
         titles: ["Inter", "sans-serif"],
