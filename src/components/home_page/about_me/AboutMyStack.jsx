@@ -1,3 +1,4 @@
+import useWindowDimensions from "../../../hooks/useWindowDimensions";
 import HibernateOriginal from "../../../assets/svg/hibernate.svg";
 import {
   BootstrapOriginal,
@@ -15,6 +16,33 @@ import {
 } from "devicons-react";
 
 export const AboutMyStack = () => {
+  // eslint-disable-next-line no-unused-vars
+  const { width, height } = useWindowDimensions();
+
+  function defineSize() {
+    if (width < 370) {
+      return 25;
+    } else if (width >= 370 && width < 436) {
+      return 30;
+    } else if (width >= 436 && width < 536) {
+      return 35;
+    } else if (width >= 536 && width < 640) {
+      return 40;
+    } else if (width >= 640 && width < 768) {
+      return 45;
+    } else if (width >= 768 && width < 886) {
+      return 30;
+    } else if (width >= 886 && width < 1024) {
+      return 32;
+    } else if (width >= 1024 && width < 1280) {
+      return 40;
+    } else if (width >= 1280 && width < 1536) {
+      return 45;
+    } else {
+      return 50;
+    }
+  }
+
   return (
     <div className="w-full flex flex-col justify-around pt-6">
       <h5 className="font-titles font-bold text-2xl text-white mt-3 mb-2 tracking-tight">
@@ -25,15 +53,35 @@ export const AboutMyStack = () => {
           <h6 className="font-titles text-md text-slate-300 pt-3 pb-3 md:pt-6">
             Frontend:
           </h6>
-          <div className="flex justify-start items-center flex-wrap gap-5 overflow-hidden">
-            <Html5Original size={40} />
-            <Css3Original size={40} />
-            <SassOriginal size={40} />
-            <BootstrapOriginal size={40} />
-            <TailwindcssPlain size={40} />
-            <JavascriptOriginal size={40} />
-            <TypescriptOriginal size={40} />
-            <ReactOriginal size={40} />
+          <div
+            className={`flex items-center ${
+              width < 370
+                ? "gap-1"
+                : width >= 370 && width < 436
+                ? "gap-2"
+                : width >= 436 && width < 536
+                ? "gap-3"
+                : width >= 536 && width < 640
+                ? "gap-4"
+                : width >= 640 && width < 768
+                ? "gap-5"
+                : width >= 768 && width < 1024
+                ? "gap-2"
+                : width >= 1024 && width < 1280
+                ? "gap-4"
+                : width >= 1280 && width < 1536
+                ? "gap-5"
+                : "gap-8"
+            }`}
+          >
+            <Html5Original size={defineSize()} />
+            <Css3Original size={defineSize()} />
+            <SassOriginal size={defineSize()} />
+            <BootstrapOriginal size={defineSize()} />
+            <TailwindcssPlain size={defineSize()} />
+            <JavascriptOriginal size={defineSize()} />
+            <TypescriptOriginal size={defineSize()} />
+            <ReactOriginal size={defineSize()} />
             <h5 className="font-titles font-bold text-2xl text-white">,</h5>
           </div>
         </li>
@@ -42,14 +90,14 @@ export const AboutMyStack = () => {
             Backend:
           </h6>
           <div className="flex justify-start items-center gap-5">
-            <JavaOriginal size={40} />
+            <JavaOriginal size={defineSize()} />
             <img
               src={HibernateOriginal}
               alt="hibernate framework logo"
-              style={{ width: 40 }}
+              style={{ width: defineSize() }}
             />
-            <SpringOriginal size={40} />
-            <PostgresqlOriginal size={40} />
+            <SpringOriginal size={defineSize()} />
+            <PostgresqlOriginal size={defineSize()} />
             <h5 className="font-titles font-bold text-2xl text-white">,</h5>
           </div>
         </li>
@@ -58,7 +106,7 @@ export const AboutMyStack = () => {
             Other Skills:
           </h6>
           <div className="flex justify-start items-center gap-5">
-            <GitOriginal size={40} />
+            <GitOriginal size={defineSize()} />
           </div>
         </li>
       </ul>
