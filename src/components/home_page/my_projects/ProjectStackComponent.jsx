@@ -13,6 +13,7 @@ import {
 import useWindowDimensions from "../../../hooks/useWindowDimensions";
 
 export default function ProjectStackComponent({ projectId }) {
+  // eslint-disable-next-line no-unused-vars
   const { width, height } = useWindowDimensions();
 
   const listVariants = {
