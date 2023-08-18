@@ -1,37 +1,74 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { IoCloseOutline } from "react-icons/io5";
+import useWindowDimensions from "../../../hooks/useWindowDimensions";
 
 export default function CloseBtnComponent({
   selected,
   projectId,
   setSelected,
 }) {
+  // eslint-disable-next-line no-unused-vars
+  const { width, height } = useWindowDimensions();
+
+  const closeBtnVariants = {
+    hidden: {
+      opacity: 0,
+      x:
+        width >= 1024 && width < 1280
+          ? 270
+          : width >= 1280 && width < 1536
+          ? 370
+          : width >= 1536
+          ? 440
+          : 100,
+    },
+    visible: {
+      opacity: 1,
+      x:
+        width >= 1024 && width < 1280
+          ? 220
+          : width >= 1280 && width < 1536
+          ? 320
+          : width >= 1536
+          ? 390
+          : 0,
+      transition: {
+        type: "spring",
+        stiffness: 100,
+        duration: 1,
+      },
+    },
+  };
+
+  const handleSelected = () => {
+    setSelected(null);
+  };
+
   return (
-    <motion.svg
+    <motion.button
       layout="position"
-      className={`project-close-btn ${
-        selected === projectId ? "btn-on" : "btn-off"
+      className={`rounded-full flex justify-center items-center ${
+        selected !== projectId
+          ? "btn-off"
+          : width < 1024 && selected === projectId
+          ? "btn-on p-1 xs:p-2"
+          : "btn-on p-2 2xl:p-3"
       }`}
-      onClick={() => {
-        setSelected(null);
+      variants={closeBtnVariants}
+      initial="hidden"
+      animate="visible"
+      whileHover={{
+        scale: 1.06,
       }}
-      viewBox="0 0 24 24"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
+      whileTap={{
+        scale: 0.95,
+      }}
+      onClick={() => {
+        handleSelected();
+      }}
     >
-      <path
-        className="path-to-fill"
-        d="M2 12C2 7.28595 2 4.92893 3.46447 3.46447C4.92893 2 7.28595 2 12 2C16.714 2 19.0711 2 20.5355 3.46447C22 4.92893 22 7.28595 22 12C22 16.714 22 19.0711 20.5355 20.5355C19.0711 22 16.714 22 12 22C7.28595 22 4.92893 22 3.46447 20.5355C2 19.0711 2 16.714 2 12Z"
-        stroke="#404952"
-        stroke-width="1.5"
-      />
-      <path
-        className="path-to-fill"
-        d="M14.5 9.50002L9.5 14.5M9.49998 9.5L14.5 14.5"
-        stroke="#404952"
-        stroke-width="1.5"
-        stroke-linecap="round"
-      />
-    </motion.svg>
+      <IoCloseOutline className="text-black text-lg 2xl:text-xl" />
+    </motion.button>
   );
 }
