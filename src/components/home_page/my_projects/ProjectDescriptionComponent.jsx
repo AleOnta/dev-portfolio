@@ -27,7 +27,7 @@ export default function ProjectDescriptionComponent({ selectedCard, project }) {
           </>
         )}
         <motion.div
-          className={`project-description-wrapper ${
+          className={`project-description-wrapper overflow-x-hidden ${
             (project.id === 1 || project.id === 2) && "lg:ps-3 lg:pe-2 "
           }
     ${
@@ -48,7 +48,7 @@ export default function ProjectDescriptionComponent({ selectedCard, project }) {
                 <motion.p
                   key={"project-" + project.id + "-description-" + i}
                   layout="position"
-                  className={`project-description mb-2  overflow-x-hidden
+                  className={`project-description mb-2 overflow-x-hidden
                   ${
                     width < 1024
                       ? "text-xs sm:text-sm  leading-normal"

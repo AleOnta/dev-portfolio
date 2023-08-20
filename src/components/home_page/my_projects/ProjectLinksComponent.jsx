@@ -56,15 +56,16 @@ export default function ProjectLinksComponent({ selectedCard, project }) {
                             : "me-2"
                         } ${project.id === 2 && "bg-opacity-50 "}`}
         whileHover={{
-          scale: project.id !== 2 && 1.1,
+          scale: project.id !== 2 ? 1.1 : 1,
         }}
         whileTap={{
-          scale: project.id !== 2 && 0.9,
+          scale: project.id !== 2 ? 0.9 : 1,
         }}
       >
         <Link
           to={project.url_deploy}
-          target="_blank"
+          disabled={project.id === 2}
+          target={project.id === 2 ? "" : "_blank"}
           className={`flex justify-center w-full h-full px-2 py-1 ${
             selectedCard !== project.id ? "px-5" : ""
           }`}
@@ -74,7 +75,7 @@ export default function ProjectLinksComponent({ selectedCard, project }) {
             layout="position"
             className="btn-icon"
             style={{ opacity: project.id === 2 && 0.5 }}
-          />{" "}
+          />
         </Link>
       </motion.button>
       <motion.button

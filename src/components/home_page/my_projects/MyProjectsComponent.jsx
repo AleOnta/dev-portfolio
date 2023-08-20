@@ -38,7 +38,7 @@ export const MyProjectsComponent = () => {
 
   useEffect(() => {
     // while a card is selected, card selection isn't available for others cards.
-    if (selectedCard) {
+    if (selectedCard || selectedCard === 0) {
       setUnclickable(true);
     } else {
       setUnclickable(false);
@@ -47,9 +47,11 @@ export const MyProjectsComponent = () => {
 
   return (
     <div className="container p-6 pb-0 md:p-0 md:px-8">
-      <h3 className="text-white text-4xl font-bold font-titles mt-32 mb-12">
-        My Projects
-      </h3>
+      <div className="w-full h-[200px] flex justify-center items-center mt-56 mb-20 bg-black bg-opacity-25 rounded-xl shadow-md">
+        <h3 className="text-white text-5xl font-bold font-titles uppercase">
+          My Projects
+        </h3>
+      </div>
       <div className="my-projects-container lg:flex justify-around items-center flex-wrap">
         {projects.map((project, i) => {
           return (
@@ -196,11 +198,10 @@ export const MyProjectsComponent = () => {
             </motion.div>
           );
         })}
-        <div
-          className="dim-layer"
-          style={{
-            backgroundColor: selectedCard ? "rgba(0, 0, 0, 0.9)" : "inherit",
-          }}
+        <motion.div
+          className={`dim-layer hidden sm:block sm:py-5 ${
+            selectedCard || selectedCard === 0 ? "active" : "inactive"
+          }`}
         />
       </div>
     </div>
