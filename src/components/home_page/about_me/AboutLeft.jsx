@@ -11,7 +11,7 @@ export const AboutLeft = () => {
         <h5 className="font-titles font-semibold text-sm sm:text-lg md:text-base text-gray-300 mb-2 ps-3">
           Junior Full-Stack Web Developer
         </h5>
-        <p className="text-slate-300 text-sm bg-smooth-gray p-3 rounded-xl">
+        <p className="text-slate-300 text-sm bg-smooth-black p-3 rounded-xl shadow-md">
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque
           accusantium architecto exercitationem asperiores ut nesciunt
           dignissimos quam ab corrupti incidunt eum quo non earum corporis

@@ -34,12 +34,10 @@ export const AboutMyStack = () => {
       return 30;
     } else if (width >= 886 && width < 1024) {
       return 32;
-    } else if (width >= 1024 && width < 1280) {
-      return 40;
-    } else if (width >= 1280 && width < 1536) {
-      return 45;
+    } else if (width >= 1024 && width < 1536) {
+      return 35;
     } else {
-      return 50;
+      return 45;
     }
   }
 
@@ -50,8 +48,8 @@ export const AboutMyStack = () => {
       </h5>
       <ul className="ps-5">
         <li>
-          <h6 className="font-titles text-md text-slate-300 pt-3 pb-3 md:pt-6">
-            Frontend:
+          <h6 className="font-titles text-base md:text-xs font-medium text-slate-300 pt-3 pb-3 md:pt-4">
+            Front end:
           </h6>
           <div
             className={`flex items-center ${
@@ -86,8 +84,8 @@ export const AboutMyStack = () => {
           </div>
         </li>
         <li>
-          <h6 className="font-titles text-md text-slate-300 pt-8 pb-3 ">
-            Backend:
+          <h6 className="font-titles text-base md:text-xs font-medium text-slate-300 pt-5 pb-3 ">
+            Back end:
           </h6>
           <div className="flex justify-start items-center gap-5">
             <JavaOriginal size={defineSize()} />
@@ -102,7 +100,7 @@ export const AboutMyStack = () => {
           </div>
         </li>
         <li>
-          <h6 className="font-titles text-md text-slate-300 pt-8 pb-3 ">
+          <h6 className="font-titles text-base md:text-xs font-medium text-slate-300 pt-5 pb-3 ">
             Other Skills:
           </h6>
           <div className="flex justify-start items-center gap-5">
