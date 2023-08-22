@@ -47,11 +47,6 @@ export const MyProjectsComponent = () => {
 
   return (
     <div className="container p-6 pb-0 md:p-0 md:px-8">
-      <div className="w-full h-[200px] flex justify-center items-center mt-56 mb-20 bg-black bg-opacity-25 rounded-xl shadow-md">
-        <h3 className="text-white text-5xl font-bold font-titles uppercase">
-          My Projects
-        </h3>
-      </div>
       <div className="my-projects-container lg:flex justify-around items-center flex-wrap">
         {projects.map((project, i) => {
           return (

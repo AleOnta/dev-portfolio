@@ -223,12 +223,16 @@ export default function ContactFormComponent() {
         />
         <motion.button
           type="submit"
-          className="w-fit px-12 py-2 mt-3 bg-slate-600 text-white rounded-md font-titles"
+          className={`w-full mt-3 bg-slate-600 text-white rounded-md font-titles ${
+            isLoading
+              ? "xs:w-[207px] h-[40px] flex items-center justify-center"
+              : "xs:w-fit px-12 py-2"
+          }`}
           whileHover={{
             backgroundColor: "rgb(100 116 139)",
           }}
         >
-          Send message
+          {isLoading ? <span class="loader"></span> : "Send message"}
         </motion.button>
       </motion.form>
       <AnimatePresence>

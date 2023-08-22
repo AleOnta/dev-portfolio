@@ -1,5 +1,6 @@
 @import "./styles/home_page/AboutMe.css";
 @import "./styles/home_page/MyProjects.css";
+@import "./styles/home_page/ContactMe.css";
 
 /* Let's get this party started */
 ::-webkit-scrollbar {
