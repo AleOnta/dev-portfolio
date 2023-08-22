@@ -60,6 +60,7 @@ export default function ContactFormComponent() {
     if (Object.keys(validationErrors).length === 0) {
       setValidated(true);
     } else {
+      setIsLoading(false);
       setValidated(false);
     }
   }
