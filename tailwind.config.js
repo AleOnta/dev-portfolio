@@ -16,6 +16,12 @@ module.exports = {
         "blueish-gray": "#404952",
         "smooth-gray": "rgba(211, 211, 211, 0.13)",
         "absolute-gray": "#484869d8",
+        "smooth-black": "rgba(0, 0, 0, 0.3)",
+        "gun-metal": "#282d33",
+        "custom-charcoal": "#404952",
+        "blueish-charcoal": "#455262",
+        "li-gray": "#95a3a4",
+        "snow-white": "#efefef",
       },
       fontFamily: {
         titles: ["Inter", "sans-serif"],
@@ -24,5 +30,5 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/forms")],
 };
