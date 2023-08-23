@@ -6,6 +6,7 @@ import useWindowDimensions from "../../../hooks/useWindowDimensions";
 import ProjectStackComponent from "./ProjectStackComponent";
 import ProjectDescriptionComponent from "./ProjectDescriptionComponent";
 import ProjectLinksComponent from "./ProjectLinksComponent";
+import ProjectTopDescription from "./ProjectTopDescription";
 
 export const MyProjectsComponent = () => {
   // eslint-disable-next-line no-unused-vars
@@ -47,6 +48,8 @@ export const MyProjectsComponent = () => {
 
   return (
     <div className="container p-6 pb-0 md:p-0 md:px-8">
+      <ProjectTopDescription />
+
       <div className="my-projects-container lg:flex justify-around items-center flex-wrap">
         {projects.map((project, i) => {
           return (
