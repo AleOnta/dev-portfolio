@@ -42,7 +42,7 @@ export const AboutMyStack = () => {
   }
 
   return (
-    <div className="w-full flex flex-col justify-around pt-6">
+    <div className="w-full flex flex-col justify-around p-6 bg-gun-metal bg-opacity-50 rounded-lg shadow-md">
       <h5 className="font-titles font-bold text-2xl text-white mt-3 mb-2 tracking-tight">
         let myStack = {"{"}
       </h5>

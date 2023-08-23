@@ -39,12 +39,11 @@
   z-index: 10;
   border-radius: 15px;
   transition-property: background-color opacity;
-  transition: 0.4s ease-out;
+  transition: 0.2s ease-out;
 }
 
 .dim-layer.active {
-  background-color: #282d33;
-  opacity: 0.9;
+  background-color: #535b63;
 }
 
 .dim-layer.inactive {
@@ -70,11 +69,11 @@
 
 @media screen and (min-width: 1024px) {
   .card-project .project-content {
-    background-color: rgba(60, 60, 74, 0.9);
+    background-color: rgba(40, 45, 51, 0.9);
   }
 
   .card-project.opened-card .project-content {
-    background-color: rgba(60, 60, 74, 1);
+    background-color: rgba(40, 45, 51, 1);
   }
 }
 

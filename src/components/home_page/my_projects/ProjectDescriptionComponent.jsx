@@ -27,14 +27,14 @@ export default function ProjectDescriptionComponent({ selectedCard, project }) {
           </>
         )}
         <motion.div
-          className={`project-description-wrapper overflow-x-hidden ${
+          className={`project-description-wrapper overflow-x-hidden font-titles ] ${
             (project.id === 1 || project.id === 2) && "lg:ps-3 lg:pe-2 "
           }
     ${
       selectedCard !== project.id
         ? "px-2 py-2 sm:px-4 sm:py-3 order-1"
         : width < 1024 && selectedCard === project.id
-        ? "p-2 max-h-80 overflow-y-auto"
+        ? "p-2 max-h-80 overflow-y-auto "
         : width >= 1024 && width < 1280 && selectedCard === project.id
         ? "p-5 max-h-72 overflow-y-auto"
         : "p-3 xl:h-80 2xl:h-96 overflow-y-auto"

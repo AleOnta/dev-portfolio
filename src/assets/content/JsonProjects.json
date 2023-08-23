@@ -7,7 +7,7 @@
     "description_test": [
       "This project was realized for a customer, who was looking around for a custom website able to publicize his professional/artistic figure & biggest passion.",
       "The SPA hosts 3 different pages such as the homepage, where visitors can understand and get to know the figure described; the about-me page, where the figure of the customer is in-depth described along his professional career; and the gallery where it's possible to see different shots of the artist while acting or posing.",
-      "This project has been realized mainly with React JS, Bootstrap, and styled with Saas.",
+      "This project has been realized mainly with React JS, Bootstrap, and styled with Sass.",
       "Other third parties library that can be found in the project are: Email JS, React-Router, Date-fns, React-toastify & Swiper JS."
     ],
     "url_repo": "https://github.com/AleOnta/artist-website",
