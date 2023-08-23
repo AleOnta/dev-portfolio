@@ -106,13 +106,13 @@ export default function ContactFormComponent() {
 
   return (
     <motion.div className="w-full lg:w-2/5">
-      <h5 className="font-titles text-white text-2xl uppercase font-semibold mb-10">
+      <h5 className="font-titles text-white text-2xl uppercase font-semibold mb-10 text-center">
         SEND ME A MESSAGE
       </h5>
       <motion.form
         ref={form}
         onSubmit={handleSubmit}
-        className="flex flex-col bg-smooth-black p-5 rounded-xl shadow-md"
+        className="flex flex-col bg-gun-metal bg-opacity-50 p-5 rounded-xl shadow-md"
       >
         <motion.div className="mb-1 flex items-center">
           <motion.label
