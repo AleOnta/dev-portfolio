@@ -105,14 +105,11 @@ export default function ContactFormComponent() {
   }, [validated]);
 
   return (
-    <motion.div className="w-full lg:w-2/5">
-      <h5 className="font-titles text-white text-2xl uppercase font-semibold mb-10 text-center">
-        SEND ME A MESSAGE
-      </h5>
+    <motion.div className="w-full lg:w-3/5">
       <motion.form
         ref={form}
         onSubmit={handleSubmit}
-        className="flex flex-col bg-gun-metal bg-opacity-50 p-5 rounded-xl shadow-md"
+        className="flex flex-col rounded-xl "
       >
         <motion.div className="mb-1 flex items-center">
           <motion.label
@@ -132,7 +129,7 @@ export default function ContactFormComponent() {
           id="contact_fname"
           name="from_firstname"
           placeholder="Your firstname..."
-          className="rounded-md bg-slate-100"
+          className="rounded-md bg-snow-white text-snow-white bg-opacity-30 shadow-md placeholder:text-xs md:placeholder:text-sm placeholder:text-snow-white placeholder:text-opacity-75 focus:bg-opacity-10 focus:border-snow-white active:border-snow-white focus:ring-snow-white transition-color duration-300 hover:bg-opacity-40"
           value={userMessage.firstname}
           onChange={(e) =>
             setUserMessage({
@@ -159,7 +156,7 @@ export default function ContactFormComponent() {
           id="contact_lname"
           name="from_lastname"
           placeholder="Your lastname..."
-          className="rounded-md bg-slate-100"
+          className="rounded-md bg-snow-white text-snow-white bg-opacity-30 shadow-md placeholder:text-xs md:placeholder:text-sm placeholder:text-snow-white placeholder:text-opacity-75 focus:bg-opacity-10 focus:border-snow-white active:border-snow-white focus:ring-snow-white transition-color duration-300 hover:bg-opacity-40"
           value={userMessage.lastname}
           onChange={(e) =>
             setUserMessage({
@@ -186,7 +183,7 @@ export default function ContactFormComponent() {
           id="contact_email"
           name="from_email"
           placeholder="Your email..."
-          className="rounded-md bg-slate-100"
+          className="rounded-md bg-snow-white text-snow-white bg-opacity-30 shadow-md placeholder:text-xs md:placeholder:text-sm placeholder:text-snow-white placeholder:text-opacity-75 focus:bg-opacity-10 focus:border-snow-white active:border-snow-white focus:ring-snow-white transition-color duration-300 hover:bg-opacity-40"
           value={userMessage.email}
           onChange={(e) =>
             setUserMessage({
@@ -213,7 +210,7 @@ export default function ContactFormComponent() {
           name="message"
           rows={6}
           placeholder="Write your message in here..."
-          className="rounded-md bg-slate-100 max-h-80"
+          className="rounded-md bg-snow-white text-snow-white bg-opacity-30 shadow-md placeholder:text-xs md:placeholder:text-sm placeholder:text-snow-white placeholder:text-opacity-75 focus:bg-opacity-10 focus:border-snow-white active:border-snow-white focus:ring-snow-white transition-color duration-300 hover:bg-opacity-40 max-h-80"
           value={userMessage.message}
           onChange={(e) =>
             setUserMessage({
@@ -224,13 +221,17 @@ export default function ContactFormComponent() {
         />
         <motion.button
           type="submit"
-          className={`w-full mt-3 bg-slate-600 text-white rounded-md font-titles ${
+          className={`w-full mt-3 xs:mt-5 bg-gun-metal bg-opacity-50 text-white rounded-md font-titles ${
             isLoading
               ? "xs:w-[207px] h-[40px] flex items-center justify-center"
               : "xs:w-fit px-12 py-2"
           }`}
           whileHover={{
-            backgroundColor: "rgb(100 116 139)",
+            backgroundColor: "rgba(40 45 51, 0.85)",
+            scale: 1.02,
+          }}
+          whileTap={{
+            scale: 0.95,
           }}
         >
           {isLoading ? <span class="loader"></span> : "Send message"}
