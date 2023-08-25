@@ -1,4 +1,8 @@
 import { AboutMyStack } from "./AboutMyStack";
+import FELayer from "../../../assets/svg/FELayer.svg";
+import { motion } from "framer-motion";
+import StackLayerComponent from "./StackLayerComponent";
+import MyStackComponent from "./MyStackComponent";
 
 export const AboutRight = () => {
   return (
@@ -40,7 +44,7 @@ export const AboutRight = () => {
           </p>
         </div>
       </div>
-      <AboutMyStack />
+      <MyStackComponent />
     </div>
   );
 };
