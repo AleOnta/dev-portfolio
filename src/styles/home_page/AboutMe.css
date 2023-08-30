@@ -1,3 +1,55 @@
 .about-me-container {
   min-height: 84vh;
+
+  @media screen and (min-width: 1920px) {
+    min-height: 82vh;
+  }
+}
+
+.btn-left-container button {
+  border: solid 2px black;
+}
+
+.btn-left-container .button-arounder {
+  --dur: 0.1s;
+  --delay: 0.1s;
+  --radius: 16px;
+
+  transition: border-top-left-radius var(--dur) var(--delay) ease-out,
+    border-top-right-radius var(--dur) calc(var(--delay) * 2) ease-out,
+    border-bottom-right-radius var(--dur) calc(var(--delay) * 3) ease-out,
+    border-bottom-left-radius var(--dur) calc(var(--delay) * 4) ease-out,
+    box-shadow calc(var(--dur) * 4) ease-out,
+    transform calc(var(--dur) * 4) ease-out,
+    background calc(var(--dur) * 4) steps(4, jump-end);
+}
+
+/* SVG in about left */
+
+.circuit_svg {
+  position: absolute;
+  top: 20%;
+  left: 0;
+  transform: translate(-50%, -50%);
+  background-color: #00000000;
+}
+
+.path {
+  animation: draw 20s infinite;
+  animation-timing-function: linear;
+}
+
+.path-2 {
+  animation: draw 20s infinite;
+  animation-delay: 1s;
+  animation-timing-function: linear;
+}
+
+@keyframes draw {
+  0% {
+  }
+  100% {
+    stroke-dashoffset: 0;
+    stroke-opacity: 1;
+  }
 }
