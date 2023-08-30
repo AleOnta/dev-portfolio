@@ -27,6 +27,7 @@ module.exports = {
         titles: ["Inter", "sans-serif"],
         body: ["Roboto Flex", "sans-serif"],
         custom: ["Karla", "sans-serif"],
+        rubik: ["Rubik", "sans-serif"],
       },
     },
   },
