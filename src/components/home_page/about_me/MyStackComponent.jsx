@@ -96,7 +96,7 @@ export default function MyStackComponent() {
       <h5 className="font-titles font-bold text-4xl xs:text-5xl md:text-3xl absolute -top-8 left-0 text-white tracking-tight drop-shadow-xl">
         My Stack
       </h5>
-      <div className="stack-vector-container ms-8">
+      <div className="stack-vector-container ms-8 mt-10">
         <motion.div
           id="frontend_layer"
           className="relative z-30"
