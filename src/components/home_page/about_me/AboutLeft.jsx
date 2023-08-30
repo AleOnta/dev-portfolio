@@ -14,12 +14,21 @@ export const AboutLeft = () => {
         <h5 className="font-titles font-semibold text-sm xs:text-lg md:text-base text-gray-300 mb-5 md:mb-2  drop-shadow-xl">
           Junior Full-Stack Web Developer
         </h5>
-        <p className="text-snow-white text-sm xs:text-base md:text-sm xl:text-base bg-gun-metal bg-opacity-50 px-4 py-3 rounded-lg shadow-md">
-          After years of studying and working in hospitality, due to a lack of
-          motivation, I decided to dedicate myself entirely to my passion for
-          development and making it my job. In my spare time, I really enjoy
-          broadening my knowledge, playing tennis, and obviously traveling.
-        </p>
+        <div>
+          <p className="text-snow-white text-sm xs:text-base md:text-sm xl:text-base bg-gun-metal bg-opacity-50 px-4 py-3 rounded-lg shadow-md">
+            After years of studying and working in{" "}
+            <span className="text-slate-400 font-semibold">hospitality</span>,
+            due to a lack of motivation, I decided to dedicate myself entirely
+            to my <span className="text-slate-400 font-semibold">passion</span>{" "}
+            for development and{" "}
+            <span className="text-slate-400 font-semibold">making it</span> my
+            job. In my spare time, I really enjoy
+            <span className="text-slate-400 font-semibold">broadening</span> my
+            knowledge, playing tennis, and{" "}
+            <span className="text-slate-400 font-semibold">obviously</span>{" "}
+            traveling.
+          </p>
+        </div>
         <motion.div className="btn-left-container flex items-center justify-between">
           <AboutLeftButtonComponent value={"Check Résumé"} goTo={""} />
           <AboutLeftButtonComponent value={"My Projects"} goTo={""} />

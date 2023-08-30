@@ -9,9 +9,21 @@ export default function CircuitComponent() {
         x: 25,
       }}
     >
-      <h6 className="w-fit text-slate-400 font-titles font-semibold text-xl absolute z-50 left-0 right-14 top-[115px] mx-auto">
+      <motion.h6
+        className="w-fit font-titles font-semibold text-xl absolute z-50 left-0 right-14 top-[115px] mx-auto"
+        animate={{
+          color: ["rgb(148 163 184)", "rgb(239 239 239)", "rgb(148 163 184)"],
+        }}
+        transition={{
+          duration: 2,
+          times: [0, 1, 2],
+          repeat: Infinity,
+          ease: "easeInOut",
+          repeatDelay: 1.8,
+        }}
+      >
         AO
-      </h6>
+      </motion.h6>
       <svg
         class="circuit_svg"
         width="800px"
