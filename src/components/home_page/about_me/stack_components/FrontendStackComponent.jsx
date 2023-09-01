@@ -15,23 +15,33 @@ import {
 export default function FrontendStackComponent({
   containerVariants,
   iconsVariants,
+  sizeCalculator,
 }) {
   const iconsArray = [
-    { icon: <Html5Original size={40} />, text: "HTML 5" },
-    { icon: <Css3Original size={40} />, text: "CSS 3" },
-    { icon: <BootstrapOriginal size={40} />, text: "Bootstrap" },
-    { icon: <TailwindcssPlain size={40} />, text: "Tailwind CSS" },
-    { icon: <SassOriginal size={40} />, text: "Sass - Scss" },
-    { icon: <JavascriptOriginal size={40} />, text: "JavaScript" },
-    { icon: <TypescriptOriginal size={40} />, text: "TypeScript" },
-    { icon: <ReactOriginal size={40} />, text: "React JS" },
-    { icon: <ReduxOriginal size={40} />, text: "Redux Toolkit" },
+    { icon: <Html5Original size={sizeCalculator()} />, text: "HTML 5" },
+    { icon: <Css3Original size={sizeCalculator()} />, text: "CSS 3" },
+    { icon: <BootstrapOriginal size={sizeCalculator()} />, text: "Bootstrap" },
+    {
+      icon: <TailwindcssPlain size={sizeCalculator()} />,
+      text: "Tailwind CSS",
+    },
+    { icon: <SassOriginal size={sizeCalculator()} />, text: "Sass - Scss" },
+    {
+      icon: <JavascriptOriginal size={sizeCalculator()} />,
+      text: "JavaScript",
+    },
+    {
+      icon: <TypescriptOriginal size={sizeCalculator()} />,
+      text: "TypeScript",
+    },
+    { icon: <ReactOriginal size={sizeCalculator()} />, text: "React JS" },
+    { icon: <ReduxOriginal size={sizeCalculator()} />, text: "Redux Toolkit" },
   ];
 
   return (
     <>
       <motion.div
-        className="flex justify-center items-center flex-wrap w-full h-[360px]"
+        className="flex justify-center items-center flex-wrap w-full h-[360px] xs:h-[400px] sm:h-[450px] md:h-[290px] lg:h-[340px]"
         variants={containerVariants}
         initial="hidden"
         animate="visible"
@@ -39,14 +49,14 @@ export default function FrontendStackComponent({
         {iconsArray.map((el, i) => (
           <motion.div
             key={"front-end-" + i}
-            className="w-1/3 flex flex-col justify-center items-center"
+            className="w-1/3 flex flex-col justify-center items-center px-2"
             variants={iconsVariants}
             whileHover={{
               cursor: "pointer",
             }}
           >
             <motion.span className="p-4">{el.icon}</motion.span>
-            <motion.span className="w-4/6 py-2 text-center text-snow-white text-xs font-semibold bg-slate-300 bg-opacity-10 rounded-md shadow-md">
+            <motion.span className="w-11/12 sm:w-9/12 lg:w-11/12 2xl:w-2/3 py-1 px-2 lg:px-0 lg:py-[6px] text-center text-xs sm:text-sm md:text-xs text-snow-white font-semibold bg-slate-300 bg-opacity-10 rounded-md shadow-md line-clamp-1">
               {el.text}
             </motion.span>
           </motion.div>

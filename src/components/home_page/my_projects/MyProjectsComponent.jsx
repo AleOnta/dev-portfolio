@@ -47,7 +47,7 @@ export const MyProjectsComponent = () => {
   }, [selectedCard]);
 
   return (
-    <div className="container p-6 pb-0 md:p-0 md:px-8">
+    <div className="container p-6 pb-0 md:p-0 md:px-8 md:mb-56 lg:mb-96">
       <ProjectTopDescription />
 
       <div className="my-projects-container lg:flex justify-around items-center flex-wrap">

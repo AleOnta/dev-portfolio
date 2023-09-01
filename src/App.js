@@ -7,7 +7,7 @@ function App() {
   return (
     <>
       <div className="bg-custom-charcoal bg-opacity-90">
-        <div className="container mx-auto py-20">
+        <div className="container mx-auto py-10 md:py-14">
           <Routes>
             <Route path="*" element={<HomepageComponent />} />
           </Routes>

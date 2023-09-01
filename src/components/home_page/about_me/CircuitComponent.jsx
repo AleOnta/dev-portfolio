@@ -1,37 +1,67 @@
 import React from "react";
 import { motion } from "framer-motion";
+import useWindowDimensions from "../../../hooks/useWindowDimensions";
 
 export default function CircuitComponent() {
+  // eslint-disable-next-line no-unused-vars
+  const { width, height } = useWindowDimensions();
+
+  const defineViewBox = () => {
+    if (width < 380) {
+      return "0 0 945 800";
+    } else if (width >= 380 && width < 436) {
+      return "0 0 880 800";
+    } else if (width >= 436 && width < 536) {
+      return "0 0 840 800";
+    } else if (width >= 536 && width < 640) {
+      return "0 0 760 800";
+    } else if (width >= 768 && width < 1024) {
+      return "0 0 925 800";
+    } else if (width >= 1024 && width < 1280) {
+      return "0 0 835 800";
+    } else if (width >= 1280 && width < 1536) {
+      return "0 0 800 800";
+    }
+  };
+
   return (
     <motion.div
-      className="w-full h-60 relative overflow-hidden mt-24"
+      className="w-full h-60 relative overflow-hidden mt-0 sm:mt-8 md:mt-12"
       animate={{
-        x: 25,
+        x:
+          width >= 640 && width < 768
+            ? 75
+            : width >= 768 && width < 1024
+            ? 0
+            : width >= 1280
+            ? 25
+            : 0,
       }}
     >
-      <motion.h6
-        className="w-fit font-titles font-semibold text-xl absolute z-50 left-0 right-14 top-[115px] mx-auto"
-        animate={{
-          color: ["rgb(148 163 184)", "rgb(239 239 239)", "rgb(148 163 184)"],
-        }}
-        transition={{
-          duration: 2,
-          times: [0, 1, 2],
-          repeat: Infinity,
-          ease: "easeInOut",
-          repeatDelay: 1.8,
-        }}
-      >
-        AO
-      </motion.h6>
-      <svg
+      <motion.svg
         class="circuit_svg"
         width="800px"
         height="800px"
-        viewBox="0 0 800 800"
+        viewBox={defineViewBox()}
         version="1.1"
         xmlns="http://www.w3.org/2000/svg"
       >
+        <motion.text
+          className="w-fit font-titles font-semibold text-xl mx-auto"
+          transform="translate(598.000000, 488.000000)"
+          animate={{
+            fill: ["rgb(148 163 184)", "rgb(239 239 239)", "rgb(148 163 184)"],
+          }}
+          transition={{
+            duration: 2,
+            times: [0, 1, 2],
+            repeat: Infinity,
+            ease: "easeInOut",
+            repeatDelay: 1.8,
+          }}
+        >
+          AO
+        </motion.text>
         <g
           id="paths"
           class="path"
@@ -141,7 +171,7 @@ export default function CircuitComponent() {
             <path d="M151,43 L151,31"></path>
           </g>
         </g>
-      </svg>
+      </motion.svg>
     </motion.div>
   );
 }

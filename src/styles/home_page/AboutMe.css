@@ -6,6 +6,12 @@
   }
 }
 
+.stack-vector-container div svg {
+  @media screen and (min-width: 436px) and (max-width: 535px) {
+    width: 95px;
+  }
+}
+
 .btn-left-container button {
   border: solid 2px black;
 }
