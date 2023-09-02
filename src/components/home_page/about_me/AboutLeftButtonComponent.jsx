@@ -23,7 +23,7 @@ export default function AboutLeftButtonComponent({ value, goTo }) {
 
   return (
     <motion.button
-      className="button-arounder text-sm xxs:text-base md:text-xs font-rubik font-medium px-2 py-1 xxs:px-3 xxs:py-2 xs:px-5 xs:py-2 md:px-4  lg:px-5 lg:py-2 mt-3 uppercase"
+      className={`button-arounder text-sm xxs:text-base md:text-xs font-rubik font-medium px-2 py-1 xxs:px-3 xxs:py-2 xs:px-5 xs:py-2 md:px-4 lg:px-5 lg:py-2 mt-3 uppercase`}
       onClick={() => navigateTo(goTo)}
       initial={{}}
       animate={{

@@ -39,7 +39,7 @@ export default function CircuitComponent() {
       }}
     >
       <motion.svg
-        class="circuit_svg"
+        className="circuit_svg"
         width="800px"
         height="800px"
         viewBox={defineViewBox()}
@@ -64,16 +64,16 @@ export default function CircuitComponent() {
         </motion.text>
         <g
           id="paths"
-          class="path"
+          className="path"
           stroke="rgb(148 163 184)"
-          stroke-width="2"
+          strokeWidth="2"
           fill="none"
-          fill-rule="evenodd"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-opacity="1"
-          stroke-dasharray="30,150"
-          stroke-dashoffset="2000"
+          fillRule="evenodd"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeOpacity="1"
+          strokeDasharray="30,150"
+          strokeDashoffset="2000"
         >
           <g id="left" transform="translate(461.000000, 416.000000)">
             <polyline points="18 0 27 0 55 28 95 28 115 48 127 48"></polyline>
@@ -92,16 +92,16 @@ export default function CircuitComponent() {
         </g>
         <g
           id="paths-2"
-          class="path-2"
+          className="path-2"
           stroke="rgb(148 163 184)"
-          stroke-width="3"
+          strokeWidth="3"
           fill="none"
-          fill-rule="evenodd"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-opacity="1"
-          stroke-dasharray="50,150"
-          stroke-dashoffset="2000"
+          fillRule="evenodd"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeOpacity="1"
+          strokeDasharray="50,150"
+          strokeDashoffset="2000"
         >
           <g id="right" transform="translate(620.000000, 427.000000)">
             <polyline points="16 69 28 69 44 85 52 85 56 81 68 81"></polyline>
@@ -116,11 +116,11 @@ export default function CircuitComponent() {
         <g
           id="paths-bg"
           stroke="rgb(148 163 184)"
-          stroke-width="1.5"
+          strokeWidth="1.5"
           fill="none"
-          fill-rule="evenodd"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          fillRule="evenodd"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         >
           <g id="left" transform="translate(461.000000, 416.000000)">
             <polyline points="18 0 27 0 55 28 95 28 115 48 127 48"></polyline>

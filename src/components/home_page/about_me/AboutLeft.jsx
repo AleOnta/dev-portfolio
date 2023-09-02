@@ -29,10 +29,25 @@ export const AboutLeft = () => {
             traveling.
           </p>
         </div>
-        <motion.div className="btn-left-container flex items-center justify-between">
-          <AboutLeftButtonComponent value={"Résumé"} goTo={"resume"} />
-          <AboutLeftButtonComponent value={"Projects"} goTo={"projects"} />
-          <AboutLeftButtonComponent value={"Contact"} goTo={"contacts"} />
+        <motion.div
+          className="btn-left-container flex items-center justify-between"
+          id="buttons-left-container"
+        >
+          <AboutLeftButtonComponent
+            value={"Résumé"}
+            goTo={"resume"}
+            margin={true}
+          />
+          <AboutLeftButtonComponent
+            value={"Projects"}
+            goTo={"projects"}
+            margin={true}
+          />
+          <AboutLeftButtonComponent
+            value={"Contact"}
+            goTo={"contacts"}
+            margin={true}
+          />
         </motion.div>
         <CircuitComponent />
       </div>
@@ -40,10 +55,13 @@ export const AboutLeft = () => {
         <Link to="/">
           <BsDiscord className="text-3xl social-icons text-slate-400 transition-colors hover:text-snow-white" />
         </Link>
-        <Link to="https://github.com/AleOnta">
+        <Link to="https://github.com/AleOnta" target="_blank">
           <BsGithub className="text-3xl social-icons text-slate-400 transition-colors hover:text-snow-white" />
         </Link>
-        <Link to="https://www.linkedin.com/in/alessandro-ontani-76848a191/">
+        <Link
+          to="https://www.linkedin.com/in/alessandro-ontani-76848a191/"
+          target="_blank"
+        >
           <BsLinkedin className="text-3xl social-icons text-slate-400 transition-colors hover:text-snow-white" />
         </Link>
       </div>

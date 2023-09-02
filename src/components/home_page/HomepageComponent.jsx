@@ -7,7 +7,6 @@ export const HomepageComponent = () => {
     <div>
       <AboutMeComponent />
       <MyProjectsComponent />
-
       <ContactComponent />
     </div>
   );
