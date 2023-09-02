@@ -162,7 +162,7 @@ export default function ScrollNavbarComponent() {
 
   return (
     <motion.div
-      className="fixed flex justify-center top-1 left-0 right-0 h-16 mx-auto z-50 "
+      className="fixed flex justify-center top-1 left-0 right-0 h-16 mx-auto z-[999] "
       variants={navbarVariants}
       initial="hidden"
       animate={show ? "visible" : "hidden"}
@@ -173,8 +173,10 @@ export default function ScrollNavbarComponent() {
             <img
               src={Logo}
               alt="Alessandro Ontani Logo"
+              className="hover:cursor-pointer"
               width={width < 640 ? 35 : 40}
               height={width < 640 ? 35 : 40}
+              onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
             />
             <motion.div
               className="flex items-center justify-center text-slate-500 text-2xl"
@@ -338,9 +340,10 @@ export default function ScrollNavbarComponent() {
             <img
               src={Logo}
               alt="Alessandro Ontani Logo"
-              className="me-6"
+              className="me-6 hover:cursor-pointer"
               width={width < 640 ? 35 : 40}
               height={width < 640 ? 35 : 40}
+              onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
             />
             <motion.ul className="flex items-center justify-around xs:justify-center ">
               <motion.li
@@ -399,6 +402,12 @@ export default function ScrollNavbarComponent() {
           <motion.div className="flex items-center justify-center gap-4">
             <motion.button
               className="relative inline-flex items-center justify-center w-[100px] py-2 overflow-hidden font-rubik uppercase font-medium text-sm text-white bg-custom-charcoal rounded-lg group"
+              whileHover={{
+                scale: 1.045,
+              }}
+              whileTap={{
+                scale: 0.95,
+              }}
               onClick={() => window.open(Resume, "_blank")}
             >
               <span className="absolute w-0 h-0 transition-all duration-700 ease-out bg-gray-800 rounded-full group-hover:w-56 group-hover:h-56"></span>
@@ -407,6 +416,12 @@ export default function ScrollNavbarComponent() {
             </motion.button>
             <motion.button
               className="relative inline-flex items-center justify-center w-[100px] py-2 overflow-hidden font-rubik uppercase font-medium text-sm text-white bg-custom-charcoal rounded-lg group"
+              whileHover={{
+                scale: 1.045,
+              }}
+              whileTap={{
+                scale: 0.95,
+              }}
               onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
             >
               <span className="absolute w-0 h-0 transition-all duration-700 ease-out bg-gray-800 rounded-full group-hover:w-56 group-hover:h-56"></span>
@@ -415,6 +430,12 @@ export default function ScrollNavbarComponent() {
             </motion.button>
             <motion.button
               className="relative inline-flex items-center justify-center w-[100px] py-2 overflow-hidden font-rubik uppercase font-medium text-sm text-white bg-custom-charcoal rounded-lg group"
+              whileHover={{
+                scale: 1.045,
+              }}
+              whileTap={{
+                scale: 0.95,
+              }}
               onClick={() => {
                 handleScrollToDesktop("projects");
               }}
@@ -425,6 +446,12 @@ export default function ScrollNavbarComponent() {
             </motion.button>
             <motion.button
               className="relative inline-flex items-center justify-center w-[100px] py-2 overflow-hidden font-rubik uppercase font-medium text-sm text-white bg-custom-charcoal rounded-lg group"
+              whileHover={{
+                scale: 1.025,
+              }}
+              whileTap={{
+                scale: 0.95,
+              }}
               onClick={() => {
                 handleScrollToDesktop("contacts");
               }}

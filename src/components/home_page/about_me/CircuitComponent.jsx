@@ -8,7 +8,7 @@ export default function CircuitComponent() {
 
   const defineViewBox = () => {
     if (width < 380) {
-      return "0 0 945 800";
+      return "0 0 900 800";
     } else if (width >= 380 && width < 436) {
       return "0 0 880 800";
     } else if (width >= 436 && width < 536) {

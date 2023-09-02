@@ -1,8 +1,12 @@
 import React from "react";
 import { motion } from "framer-motion";
 import Resume from "../../../assets/pdf/CVEN.pdf";
+import useWindowDimensions from "../../../hooks/useWindowDimensions";
 
 export default function AboutLeftButtonComponent({ value, goTo }) {
+  // eslint-disable-next-line no-unused-vars
+  const { width, height } = useWindowDimensions();
+
   const navigateTo = (purpose) => {
     if (purpose === "resume") {
       window.open(Resume, "_blank");
@@ -30,10 +34,10 @@ export default function AboutLeftButtonComponent({ value, goTo }) {
         background: "rgb(40 45 51, 0.5)",
         color: "#fff",
         border: "2px solid black",
-        borderTopLeftRadius: 0,
-        borderTopRightRadius: 0,
-        borderBottomLeftRadius: 0,
-        borderBottomRightRadius: 0,
+        borderTopLeftRadius: width < 768 ? 14 : 0,
+        borderTopRightRadius: width < 768 ? 14 : 0,
+        borderBottomLeftRadius: width < 768 ? 14 : 0,
+        borderBottomRightRadius: width < 768 ? 14 : 0,
         boxShadow: "0 0px 0px #0b0e0f33",
         y: 0,
       }}
