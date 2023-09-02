@@ -18,7 +18,7 @@ export default function ProjectLinksComponent({ selectedCard, project }) {
               (project.id === 1 || project.id === 2) && "lg:flex-col"
             }`
           : width < 1024 && selectedCard === project.id
-          ? "absolute top-[122px] md:top-[105px] right-1"
+          ? "absolute top-[79px] xs:top-[97px] md:top-[115px] right-1"
           : "flex flex-row item-center absolute top-[18px] xl:top-[22px] 2xl:top-[25px] right-4 "
       }`}
     >
@@ -38,7 +38,7 @@ export default function ProjectLinksComponent({ selectedCard, project }) {
                       }
                       `}
       >
-        Dec-22
+        {project.date}
       </motion.p>
       <motion.button
         layout="position"
