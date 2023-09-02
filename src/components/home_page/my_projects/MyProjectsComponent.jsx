@@ -15,14 +15,12 @@ export const MyProjectsComponent = () => {
   const [unclickable, setUnclickable] = useState(false);
 
   const defineSpacing = () => {
-    if (width < 390) {
-      return 190;
-    } else if (width >= 390 && width < 476) {
-      return 175;
-    } else if (width >= 476 && width < 576) {
-      return 140;
+    if (height < 700) {
+      return 250;
+    } else if (height >= 700 && height < 800) {
+      return 200;
     } else {
-      return 110;
+      return 150;
     }
   };
 
@@ -35,7 +33,7 @@ export const MyProjectsComponent = () => {
 
     if (!btn && !svg && !alternativeSvg) {
       if (selectedCard !== projectId) {
-        if (width < 1024) {
+        if (height < 1024) {
           let container = document.getElementById("project-top-description");
           window.scrollTo({
             top: container.offsetTop + defineSpacing(),
