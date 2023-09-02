@@ -34,7 +34,7 @@ export default function ProjectDescriptionComponent({ selectedCard, project }) {
       selectedCard !== project.id
         ? "px-2 py-2 sm:px-4 sm:py-3 order-1"
         : width < 1024 && selectedCard === project.id
-        ? "p-2 max-h-80 overflow-y-auto "
+        ? "p-2 max-h-64 overflow-y-auto "
         : width >= 1024 && width < 1280 && selectedCard === project.id
         ? "p-5 max-h-72 overflow-y-auto"
         : "p-3 xl:h-80 2xl:h-96 overflow-y-auto"
@@ -48,26 +48,28 @@ export default function ProjectDescriptionComponent({ selectedCard, project }) {
                 <motion.p
                   key={"project-" + project.id + "-description-" + i}
                   layout="position"
-                  className={`project-description mb-2 overflow-x-hidden
+                  className={`project-description mb-2 overflow-x-hidden font-normal
                   ${
                     width < 1024
-                      ? "text-xs sm:text-sm  leading-normal"
-                      : "2xl:text-base leading-relaxed"
+                      ? "text-sm md:text-base leading-normal"
+                      : "lg:text-base xl:text-lg leading-6"
                   } 
-                  ${(project.id === 0 || project.id === 3) && "lg:text-sm"}`}
+                  `}
                 >
                   {string}
                 </motion.p>
               );
             })}
-          <motion.p
-            layout="position"
-            className={`project-description text-xs md:text-sm xl:text-sm 2xl:text-base line-clamp-4 ${
-              (project.id === 0 || project.id === 3) && "lg:text-sm"
-            }`}
-          >
-            {project.subtitle}
-          </motion.p>
+          {selectedCard !== project.id && (
+            <motion.p
+              layout="position"
+              className={`project-description text-xs md:text-sm xl:text-sm 2xl:text-base line-clamp-4 ${
+                (project.id === 0 || project.id === 3) && "lg:text-sm"
+              }`}
+            >
+              {project.subtitle}
+            </motion.p>
+          )}
         </motion.div>
       </motion.div>
     </>

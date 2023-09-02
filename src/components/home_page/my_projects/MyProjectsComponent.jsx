@@ -125,13 +125,13 @@ export const MyProjectsComponent = () => {
                         }}
                       />
                       <motion.div
-                        className="h-full w-full absolute left-0 right-0 bottom-0 top-0"
+                        className="h-full w-full absolute left-0 right-0 bottom-0 top-0 bg-gun-metal"
                         layout
                         style={{
                           backgroundColor:
                             selectedCard === project.id
-                              ? "rgba(60, 60, 74, 1)"
-                              : "rgba(60, 60, 74, 0.9)",
+                              ? "rgba(40, 45, 51, 1)"
+                              : "rgb(40, 45, 51, 0.9)",
                           zIndex: selectedCard === project.id ? 8 : 9,
                         }}
                       />
@@ -197,7 +197,7 @@ export const MyProjectsComponent = () => {
           );
         })}
         <motion.div
-          className={`dim-layer hidden sm:block sm:py-5 ${
+          className={`dim-layer sm:py-5 ${
             selectedCard || selectedCard === 0 ? "active" : "inactive"
           }`}
         />

@@ -68,7 +68,7 @@ export default function CloseBtnComponent({
         handleSelected();
       }}
     >
-      <IoCloseOutline className="text-black text-lg 2xl:text-xl" />
+      <IoCloseOutline className="text-black text-2xl xl:text-3xl" />
     </motion.button>
   );
 }

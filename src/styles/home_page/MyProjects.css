@@ -212,7 +212,7 @@
 .opened-card {
   border-radius: 15px;
   cursor: pointer;
-  height: 90%;
+  height: 80%;
   width: 100%;
   position: absolute;
   top: 0;
@@ -226,21 +226,27 @@
   pointer-events: auto;
 }
 
+@media screen and (min-width: 536px) {
+  .opened-card {
+    height: 85%;
+  }
+}
+
 @media screen and (min-width: 640px) {
   .opened-card {
     width: 85%;
   }
 }
 
-@media screen and (max-width: 768px) {
-  .opened-card {
-    height: 100%;
-  }
-}
-
 @media screen and (min-width: 768px) {
   .opened-card {
     width: 75%;
+    height: 90%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .opened-card {
     height: 95%;
   }
 }
@@ -258,7 +264,7 @@
 }
 
 .controlled-z-index {
-  z-index: 999;
+  z-index: 998;
 }
 
 .not-controlled-z-index {
