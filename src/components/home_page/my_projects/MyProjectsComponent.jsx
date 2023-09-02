@@ -14,6 +14,18 @@ export const MyProjectsComponent = () => {
   const [selectedCard, setSelectedCard] = useState(null);
   const [unclickable, setUnclickable] = useState(false);
 
+  const defineSpacing = () => {
+    if (width < 390) {
+      return 190;
+    } else if (width >= 390 && width < 476) {
+      return 175;
+    } else if (width >= 476 && width < 576) {
+      return 140;
+    } else {
+      return 110;
+    }
+  };
+
   const handleSelectedCard = (e, projectId) => {
     let classes = Array.from(e.target.classList);
     // creating conditions to avoid card selection while clicking on buttons
@@ -23,6 +35,13 @@ export const MyProjectsComponent = () => {
 
     if (!btn && !svg && !alternativeSvg) {
       if (selectedCard !== projectId) {
+        if (width < 1024) {
+          let container = document.getElementById("project-top-description");
+          window.scrollTo({
+            top: container.offsetTop + defineSpacing(),
+            behavior: "smooth",
+          });
+        }
         setSelectedCard(projectId);
       }
     }
