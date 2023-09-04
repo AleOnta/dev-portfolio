@@ -45,7 +45,7 @@ export default function BackToTopComponent() {
 
   return (
     <motion.div
-      className="fixed bottom-20 left-0 right-0 mx-auto z-[999] w-fit"
+      className="fixed bottom-20 left-0 right-0 mx-auto z-[100] w-fit"
       variants={buttonVariants}
       initial="hidden"
       animate={show ? "visible" : "hidden"}

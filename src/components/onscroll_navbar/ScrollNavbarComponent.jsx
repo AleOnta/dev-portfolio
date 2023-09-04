@@ -162,7 +162,7 @@ export default function ScrollNavbarComponent() {
 
   return (
     <motion.div
-      className="fixed flex justify-center top-0 left-0 right-0 h-16 mx-auto z-[999] "
+      className="fixed flex justify-center top-0 left-0 right-0 h-16 mx-auto z-[1000] "
       variants={navbarVariants}
       initial="hidden"
       animate={show ? "visible" : "hidden"}
