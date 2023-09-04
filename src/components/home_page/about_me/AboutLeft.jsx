@@ -22,7 +22,7 @@ export const AboutLeft = () => {
             to my <span className="text-slate-400 font-semibold">passion</span>{" "}
             for development and{" "}
             <span className="text-slate-400 font-semibold">making it</span> my
-            job. In my spare time, I really enjoy
+            job. In my spare time, I really enjoy{" "}
             <span className="text-slate-400 font-semibold">broadening</span> my
             knowledge, playing tennis, and{" "}
             <span className="text-slate-400 font-semibold">obviously</span>{" "}
@@ -44,7 +44,7 @@ export const AboutLeft = () => {
             margin={true}
           />
           <AboutLeftButtonComponent
-            value={"Contact"}
+            value={"Contacts"}
             goTo={"contacts"}
             margin={true}
           />

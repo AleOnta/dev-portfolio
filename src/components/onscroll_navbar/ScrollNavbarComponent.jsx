@@ -8,9 +8,9 @@ import React from "react";
 import { useState } from "react";
 import { useEffect } from "react";
 import { BiMenu } from "react-icons/bi";
-import Resume from "../../assets/pdf/CVEN.pdf";
 import { AnimatePresence, motion } from "framer-motion";
 import useWindowDimensions from "../../hooks/useWindowDimensions";
+import Resume from "../../assets/pdf/CV - Alessandro Ontani - EN.pdf";
 import Logo from "../../assets/images/logos/logo-portfolio-favicon.svg";
 
 export default function ScrollNavbarComponent() {
@@ -25,7 +25,7 @@ export default function ScrollNavbarComponent() {
       opacity: 0,
     },
     visible: {
-      y: 0,
+      y: 15,
       opacity: 1,
     },
   };
@@ -162,7 +162,7 @@ export default function ScrollNavbarComponent() {
 
   return (
     <motion.div
-      className="fixed flex justify-center top-1 left-0 right-0 h-16 mx-auto z-[999] "
+      className="fixed flex justify-center top-0 left-0 right-0 h-16 mx-auto z-[999] "
       variants={navbarVariants}
       initial="hidden"
       animate={show ? "visible" : "hidden"}
@@ -196,7 +196,7 @@ export default function ScrollNavbarComponent() {
           <AnimatePresence>
             {open && (
               <motion.div
-                className="absolute h-screen w-screen bg-blueish-gray -top-1 left-0 right-0 mx-auto flex flex-col items-center justify-center text-2xl font-rubik font-medium"
+                className="absolute h-screen w-screen bg-blueish-gray -top-4 left-0 right-0 mx-auto flex flex-col items-center justify-center text-2xl font-rubik font-medium"
                 variants={mobileVariants}
                 exit={{
                   y: "-100vh",
@@ -335,7 +335,7 @@ export default function ScrollNavbarComponent() {
           </AnimatePresence>
         </>
       ) : (
-        <motion.div className="on-scroll-navbar w-[952px] xl:w-[1216px] 2xl:w-[1472px] px-4 bg-gun-metal bg-opacity-75 rounded-lg shadow-2xl flex items-center justify-between">
+        <motion.div className="on-scroll-navbar w-[952px] xl:w-[1216px] 2xl:w-[1472px] px-4 bg-gun-metal rounded-lg shadow-2xl flex items-center justify-between">
           <motion.div className="flex items-center justify-start">
             <img
               src={Logo}

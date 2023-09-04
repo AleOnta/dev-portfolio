@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
-import Resume from "../../../assets/pdf/CVEN.pdf";
 import useWindowDimensions from "../../../hooks/useWindowDimensions";
+import Resume from "../../../assets/pdf/CV - Alessandro Ontani - EN.pdf";
 
 export default function AboutLeftButtonComponent({ value, goTo }) {
   // eslint-disable-next-line no-unused-vars
