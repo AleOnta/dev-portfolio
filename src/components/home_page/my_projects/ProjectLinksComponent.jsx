@@ -24,17 +24,17 @@ export default function ProjectLinksComponent({ selectedCard, project }) {
     >
       <motion.p
         layout="position"
-        className={`project-date bg-slate-600 rounded-md font-custom uppercase leading-6 h-[32px] lg:w-[62px] 2xl:w-[72px]
+        className={`project-date bg-slate-600 rounded-md font-rubik uppercase leading-6 h-[32px] lg:w-[62px] 2xl:w-[72px] text-center 
                       ${
                         selectedCard !== project.id
-                          ? `text-xs text-[0.9rem] 2xl:text-base font-semibold px-2 py-1 hidden lg:block  ${
+                          ? `text-xs text-[0.9rem] font-semibold px-2 py-1 hidden lg:block  ${
                               project.id === 1 || project.id === 2
                                 ? "lg:me-0"
                                 : "lg:me-1 xl:me-3"
                             }`
                           : width < 1024 && selectedCard === project.id
                           ? "text-sm p-1 font-semibold mb-2 leading-relaxed"
-                          : "flex justify-center items-center me-2 "
+                          : "flex justify-center items-center me-2 text-sm font-semibold"
                       }
                       `}
       >
@@ -65,6 +65,7 @@ export default function ProjectLinksComponent({ selectedCard, project }) {
         <Link
           to={project.url_deploy}
           disabled={project.id === 2}
+          onClick={(e) => project.id === 2 && e.preventDefault()}
           target={project.id === 2 ? "" : "_blank"}
           className={`flex justify-center w-full h-full px-2 py-1 ${
             selectedCard !== project.id ? "px-5" : ""

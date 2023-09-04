@@ -33,7 +33,7 @@ export const MyProjectsComponent = () => {
 
     if (!btn && !svg && !alternativeSvg) {
       if (selectedCard !== projectId) {
-        if (height < 1024) {
+        if (width < 1024) {
           let container = document.getElementById("project-top-description");
           window.scrollTo({
             top: container.offsetTop + defineSpacing(),
